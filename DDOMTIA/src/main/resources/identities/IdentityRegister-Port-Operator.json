@@ -1,0 +1,40 @@
+{
+  "identityName": "Port-Operator",
+  "iterations": 0,
+  "register": {
+    "basic": [
+      {
+        "name": "TSA1",
+        "address": "http://zeitstempel.dfn.de"
+      },
+      {
+        "name": "TSA2",
+        "address": "http://zeitstempel.dfn.de"
+      }
+    ],
+    "extended": {
+      "tsa": [],
+      "identities": [
+        {
+          "identityName": "NPorts",
+          "register": {
+            "basic": [
+              {
+                "name": "TSA3",
+                "address": "http://zeitstempel.dfn.de"
+              }
+            ],
+            "extended": {
+              "tsa": [],
+              "identities": []
+            }
+          }
+        }
+      ]
+    }
+  },
+  "iterationMap": {
+    "0": [{"name": "TSA1", "address": "http://zeitstempel.dfn.de"}],
+    "1": []
+  }
+}

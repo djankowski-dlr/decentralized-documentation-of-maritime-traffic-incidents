@@ -1,0 +1,36 @@
+{
+  "identityName": "VTS-Operation",
+  "iterations": 1,
+  "register": {
+    "basic": [
+      {
+        "name": "TSA3",
+        "address": "http://zeitstempel.dfn.de"
+      }
+    ],
+    "extended": {
+      "tsa": [],
+      "identities": [
+        {
+          "identityName": "BSH",
+          "register": {
+            "basic": [
+              {
+                "name": "TSA1",
+                "address": "http://zeitstempel.dfn.de"
+              },
+              {
+                "name": "TSA2",
+                "address": "http://zeitstempel.dfn.de"
+              }
+            ],
+            "extended": {
+              "tsa": [],
+              "identities": []
+            }
+          }
+        }
+      ]
+    }
+  }
+}

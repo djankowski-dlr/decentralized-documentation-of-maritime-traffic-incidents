@@ -1,0 +1,127 @@
+{
+  "identityName": "Vessel",
+  "iterations": 2,
+  "register": {
+    "basic": [
+      {
+        "name": "TSA4",
+        "address": "http://zeitstempel.dfn.de"
+      },
+      {
+        "name": "TSA5",
+        "address": "http://zeitstempel.dfn.de"
+      }
+    ],
+    "extended": {
+      "tsa": [],
+      "identities": [
+        {
+          "identityName": "DLR",
+          "register": {
+            "basic": [
+              {
+                "name": "TSA6",
+                "address": "http://zeitstempel.dfn.de"
+              }
+            ],
+            "extended": {
+              "tsa": [],
+              "identities": [
+                {
+                  "identityName": "BSH",
+                  "register": {
+                    "basic": [
+                      {
+                        "name": "TSA1",
+                        "address": "http://zeitstempel.dfn.de"
+                      },
+                      {
+                        "name": "TSA2",
+                        "address": "http://zeitstempel.dfn.de"
+                      }
+                    ],
+                    "extended": {
+                      "tsa": [],
+                      "identities": []
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "identityName": "IALA",
+          "register": {
+            "basic": [
+              {
+                "name": "TSA7",
+                "address": "http://zeitstempel.dfn.de"
+              }
+            ],
+            "extended": {
+              "tsa": [],
+              "identities": [
+                {
+                  "identityName": "BSH",
+                  "register": {
+                    "basic": [
+                      {
+                        "name": "TSA1",
+                        "address": "http://zeitstempel.dfn.de"
+                      },
+                      {
+                        "name": "TSA2",
+                        "address": "http://zeitstempel.dfn.de"
+                      }
+                    ],
+                    "extended": {
+                      "tsa": [],
+                      "identities": [
+                        {
+                          "identityName": "DLR",
+                          "register": {
+                            "basic": [
+                              {
+                                "name": "TSA6",
+                                "address": "http://zeitstempel.dfn.de"
+                              }
+                            ],
+                            "extended": {
+                              "tsa": [],
+                              "identities": [
+                                {
+                                  "identityName": "BSH",
+                                  "register": {
+                                    "basic": [
+                                      {
+                                        "name": "TSA1",
+                                        "address": "http://zeitstempel.dfn.de"
+                                      },
+                                      {
+                                        "name": "TSA2",
+                                        "address": "http://zeitstempel.dfn.de"
+                                      }
+                                    ],
+                                    "extended": {
+                                      "tsa": [],
+                                      "identities": []
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

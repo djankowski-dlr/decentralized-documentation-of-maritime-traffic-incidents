@@ -1,0 +1,52 @@
+version: "3.9"
+services:
+  application:
+    container_name: DDOMTI
+    image: localhost:5000/ddomti:latest
+    stdin_open: true
+    restart: always
+    ports:
+      - "12000:12000"
+    environment:
+      - server_port=12000
+      - spring_data_mongodb_host=mongo
+      - p2p_endpoint=http://p2p-vessel:12001
+      - p2p_port=50603
+      - connection_host=192.168.178.115 # port ip
+      - connection_port=50601 # Port port
+      - identity_file_path=identities/IdentityRegister-Vessel.json
+    depends_on:
+      mongo:
+        condition: service_started
+      p2p-vessel:
+        condition: service_started
+
+  p2p-vessel:
+    container_name: P2P
+    image: localhost:5000/p2p:latest
+    restart: always
+    ports:
+      - "12001:12001"
+      - "50603:50603"
+    environment:
+      - server_port=12001
+      - p2p_name=VESSEL
+      - p2p_port=50603
+
+  mongo:
+    container_name: MongoDB
+    image: mongo:6.0.1
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+    command: [--auth]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: admin
+
+volumes:
+  mongo-data:
+    driver: local
